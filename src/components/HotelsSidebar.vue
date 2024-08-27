@@ -405,20 +405,17 @@ const edit_hotel_data = async (obj) => {
 
 :where(.select-list, .add-list) .input-data {
   width: 100%;
-}
-
-input {
   border-radius: 5px;
 }
 
 .input-valid {
-  border: 2px solid rgb(0, 192, 0); /* 设置焦点时的边框 */
-  outline: none; /* 移除默认的轮廓 */
+  border: 2px solid rgb(0, 192, 0);
+  outline: none;
 }
 
 .input-invalid {
-  border: 2px solid red; /* 设置焦点时的边框 */
-  outline: none; /* 移除默认的轮廓 */
+  border: 2px solid red;
+  outline: none;
 }
 
 .alert_word {

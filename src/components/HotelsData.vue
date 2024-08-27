@@ -30,7 +30,7 @@ onMounted(() => {
 
 <template>
   <header class="search-bar">
-    <div class="title" style="margin: 10px">
+    <div class="title" style="padding: 10px">
       <h2 style="flex-shrink: 0">房間資料</h2>
       <input
         v-model="hotel_name"
