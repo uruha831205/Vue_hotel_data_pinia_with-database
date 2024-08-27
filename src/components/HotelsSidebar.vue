@@ -351,6 +351,11 @@ const edit_hotel_data = async (obj) => {
           v-model="new_hotel_obj.hotel_pic"
           placeholder="https://..."
         />
+        <img
+          v-if="new_hotel_obj.hotel_pic != ''"
+          :src="new_hotel_obj.hotel_pic"
+          style="width: 100%; height: 150px; margin-top: 5px"
+        />
         <div class="equipments">
           <div style="display: flex">
             <input
@@ -402,8 +407,12 @@ const edit_hotel_data = async (obj) => {
   width: 100%;
 }
 
+input {
+  border-radius: 5px;
+}
+
 .input-valid {
-  border: 2px solid green; /* 设置焦点时的边框 */
+  border: 2px solid rgb(0, 192, 0); /* 设置焦点时的边框 */
   outline: none; /* 移除默认的轮廓 */
 }
 

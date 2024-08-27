@@ -29,31 +29,33 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="title search-bar" style="margin: 10px">
-    <h2 style="flex-shrink: 0">房間資料</h2>
-    <input
-      v-model="hotel_name"
-      placeholder="熱門搜尋 : 雙人"
-      style="
-        border: none;
-        background: transparent;
-        outline: none;
-        font-size: 1.2em;
-        border-bottom: 1px solid;
-        margin: 0 5px;
-        flex-grow: 1;
-        min-width: 100px;
-      "
-    />
-    <button
-      @click="search_hotel_name(hotel_name)"
-      style="font-size: 1.1em; flex-shrink: 0"
-    >
-      搜尋
-    </button>
-  </div>
-
-  <hr />
+  <header class="search-bar">
+    <div class="title" style="margin: 10px">
+      <h2 style="flex-shrink: 0">房間資料</h2>
+      <input
+        v-model="hotel_name"
+        placeholder="熱門搜尋 : 雙人"
+        style="
+          border: none;
+          background: transparent;
+          outline: none;
+          font-size: 1.2em;
+          border-bottom: 1px solid;
+          margin: 0 5px;
+          width: clamp(200px, 30%, 800px);
+        "
+      />
+      <button
+        @click="search_hotel_name(hotel_name)"
+        style="font-size: 1.1em; flex-shrink: 0"
+      >
+        搜尋
+      </button>
+    </div>
+    <div>
+      <hr />
+    </div>
+  </header>
 
   <div class="hotels-layout">
     <div v-for="hotel in rtn_hotel_data" :key="hotel.id" class="hotel">
